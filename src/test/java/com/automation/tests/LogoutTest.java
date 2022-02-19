@@ -8,20 +8,22 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 public class LogoutTest extends BaseTest {
 
     @Test
-    public void userCanLogoutFromApp() {
+    public void userCanLogoutFromApp()  {
 
         loginPage.doLogin();
 
-        homePage.verifyHomePage();
+        homePage.verifyPage();
 
         homePage.clickOnBurgerMenu();
 
         homePage.clickOnLogoutLink();
 
-        loginPage.verifyLoginPage();
+        loginPage.verifyPage();
 
 
     }
